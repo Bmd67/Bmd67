@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mushin — The Way of the Warrior</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Inter:wght@300;400;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+    header {
+      text-align: center;
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "無心";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20rem;
+      font-family: 'Noto Serif JP', serif;
+      color: rgba(255,68,68,0.03);
+      pointer-events: none;
+    }
+    h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 3.5rem;
+      color: #ff4444;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #8b949e;
+      letter-spacing: 2px;
+    }
+    .quote {
+      font-style: italic;
+      color: #ff4444;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    section { margin: 4rem 0; }
+    h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.8rem;
+      color: #ff4444;
+      border-bottom: 2px solid #21262d;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.8rem;
+    }
+    .skill-tag {
+      background: #161b22;
+      border: 1px solid #30363d;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #c9d1d9;
+      transition: all 0.2s;
+    }
+    .skill-tag:hover {
+      border-color: #ff4444;
+      color: #ff4444;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .project-card:hover { border-color: #ff4444; }
+    .project-card h3 { color: #ff4444; margin-bottom: 0.5rem; }
+    .project-card p { color: #8b949e; font-size: 0.9rem; margin-bottom: 1rem; }
+    .project-card .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .project-card .tech span {
+      background: #0d1117;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: #58a6ff;
+      border: 1px solid #21262d;
+    }
+    .project-card a {
+      color: #ff4444;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .project-card a:hover { text-decoration: underline; }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #30363d;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-item::before {
+      content: '⚔️';
+      position: absolute;
+      left: -2.4rem;
+      top: 0;
+      font-size: 0.8rem;
+    }
+    .timeline-item h3 { color: #c9d1d9; }
+    .timeline-item .meta {
+      color: #8b949e;
+      font-size: 0.85rem;
+    }
+    .timeline-item p { margin-top: 0.3rem; }
+
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      border-top: 1px solid #21262d;
+      color: #484f58;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      header::before { font-size: 12rem; }
+      h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>無心 Mushin</h1>
+      <p class="subtitle">SAMURAI DEVELOPER</p>
+      <p class="quote">"Code is the sword. Mind is the sheath."</p>
+    </header>
+
+    <section>
+      <h2>⚔️ About</h2>
+      <p>
+        A seasoned software engineer with deep expertise in systems programming, 
+        full-stack architecture, and DevOps infrastructure. I craft clean, 
+        performant code with the precision of a master swordsman. Every function 
+        is a kata — practiced until perfect.
+      </p>
+    </section>
+
+    <section>
+      <h2>🗡️ Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-tag">Rust</div>
+        <div class="skill-tag">Go</div>
+        <div class="skill-tag">TypeScript</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Python</div>
+        <div class="skill-tag">React</div>
+        <div class="skill-tag">Next.js</div>
+        <div class="skill-tag">Node.js</div>
+        <div class="skill-tag">PostgreSQL</div>
+        <div class="skill-tag">Redis</div>
+        <div class="skill-tag">Docker</div>
+        <div class="skill-tag">Kubernetes</div>
+        <div class="skill-tag">Terraform</div>
+        <div class="skill-tag">CI/CD</div>
+        <div class="skill-tag">Neovim</div>
+        <div class="skill-tag">Linux</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🏯 Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3><a href="https://github.com/Bmd67/kensei">🗡️ Kensei</a></h3>
+          <p>A blazing-fast Rust build tool with real-time file watching. The sword of the code warrior.</p>
+          <div class="tech"><span>Rust</span><span>Tokio</span><span>CLI</span></div>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/Bmd67/fujin">🌀 Fujin</a></h3>
+          <p>Real-time full-stack dashboard built with Next.js 15 and WebAssembly.</p>
+          <div class="tech"><span>Next.js</span><span>TypeScript</span><span>React</span></div>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/Bmd67/dojo">🏯 Dojo</a></h3>
+          <p>Production-grade DevOps infrastructure with Docker, Kubernetes, and Terraform.</p>
+          <div class="tech"><span>Docker</span><span>K8s</span><span>Terraform</span></div>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/Bmd67/shinobi">👤 Shinobi</a></h3>
+          <p>A stealthy Go microservice framework with PostgreSQL and gRPC.</p>
+          <div class="tech"><span>Go</span><span>Gin</span><span>PostgreSQL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📜 Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Senior Staff Engineer</h3>
+          <p class="meta">Tech Corp · 2020 — Present</p>
+          <p>Led architecture design for distributed systems serving 10M+ users. Migrated monolith to microservices. Reduced latency by 60%.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Principal Developer</h3>
+          <p class="meta">StartupX · 2016 — 2020</p>
+          <p>Built the core platform from scratch using Go and React. Grew engineering team from 3 to 25. Exited successfully.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Full-Stack Developer</h3>
+          <p class="meta">Digital Agency · 2012 — 2016</p>
+          <p>Delivered 20+ web applications using Node.js, React, and PostgreSQL. Established CI/CD practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>⚔️ Mushin — The mind without mind. Be the code.</p>
+      <p>Last updated: 2026 • 令和8年</p>
+    </footer>
+  </div>
+</body>
+</html>
