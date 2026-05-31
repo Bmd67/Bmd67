@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mushin — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    @page { margin: 0.5in; size: letter; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1f2937;
+      font-size: 10pt;
+      line-height: 1.5;
+      padding: 2rem;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #dc2626;
+    }
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #dc2626;
+      letter-spacing: 2px;
+    }
+    .header .sub {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+    .header .contact {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #dc2626;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.25rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .summary { margin-bottom: 1rem; font-size: 0.9rem; color: #374151; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .skill { background: #f3f4f6; padding: 0.2rem 0.6rem; border-radius: 3px; font-size: 0.8rem; }
+    .skill.primary { background: #dc2626; color: white; }
+    .entry { margin-bottom: 0.75rem; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .entry-header h3 { font-size: 0.95rem; font-weight: 700; }
+    .entry-header .meta { font-size: 0.8rem; color: #6b7280; font-weight: 400; }
+    .entry .company { font-weight: 600; color: #dc2626; font-size: 0.85rem; }
+    .entry .date { font-size: 0.8rem; color: #9ca3af; }
+    .entry ul { margin: 0.25rem 0 0 1.2rem; font-size: 0.85rem; }
+    .entry ul li { margin-bottom: 0.15rem; }
+    .project-entry { margin-bottom: 0.5rem; }
+    .project-entry h4 { font-size: 0.9rem; font-weight: 600; color: #dc2626; }
+    .project-entry .tech { font-size: 0.75rem; color: #6b7280; margin-bottom: 0.15rem; }
+    .project-entry p { font-size: 0.85rem; }
+    @media print {
+      body { padding: 0; }
+      .header { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>無心 MUSHIN</h1>
+    <div class="sub">Samurai Developer · Systems Architect</div>
+    <div class="contact">
+      <span>github.com/Bmd67</span>
+      <span>mushin@example.com</span>
+      <span>Japan / Remote</span>
+    </div>
+  </div>
+
+  <div class="summary">
+    <p>
+      Seasoned software engineer with 15+ years of experience architecting distributed systems,
+      leading engineering teams, and delivering production-grade infrastructure. 
+      Deep expertise in Rust, Go, TypeScript, and cloud-native technologies. 
+      Passionate about clean code, performant systems, and developer tooling.
+    </p>
+  </div>
+
+  <h2>🛠️ Technical Skills</h2>
+  <div class="skills-grid">
+    <span class="skill primary">Rust</span>
+    <span class="skill primary">Go</span>
+    <span class="skill primary">TypeScript</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">Python</span>
+    <span class="skill">React</span>
+    <span class="skill">Next.js</span>
+    <span class="skill">Node.js</span>
+    <span class="skill">PostgreSQL</span>
+    <span class="skill">Redis</span>
+    <span class="skill">Docker</span>
+    <span class="skill">Kubernetes</span>
+    <span class="skill">Terraform</span>
+    <span class="skill">GitHub Actions</span>
+    <span class="skill">Linux</span>
+    <span class="skill">Neovim</span>
+  </div>
+
+  <h2>💼 Experience</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <h3>Senior Staff Engineer</h3>
+      <span class="date">2020 — Present</span>
+    </div>
+    <div class="company">Tech Corp · Remote</div>
+    <ul>
+      <li>Architected distributed event-driven system handling 10M+ daily requests using Go and Kafka</li>
+      <li>Reduced P95 latency by 60% through query optimization and caching strategy redesign</li>
+      <li>Led migration from monolithic Rails app to 12 microservices with Docker and Kubernetes</li>
+      <li>Mentored 5 junior engineers through structured code review and pair programming programs</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <h3>Principal Developer</h3>
+      <span class="date">2016 — 2020</span>
+    </div>
+    <div class="company">StartupX · San Francisco, CA</div>
+    <ul>
+      <li>Built core platform from scratch using Go, React, and PostgreSQL, serving 500K+ users</li>
+      <li>Grew engineering organization from 3 to 25, establishing hiring rubrics and onboarding processes</li>
+      <li>Designed CI/CD pipeline reducing deployment time from 45 min to 4 min</li>
+      <li>Successfully exited through acquisition by Fortune 500 company in 2020</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <h3>Full-Stack Developer</h3>
+      <span class="date">2012 — 2016</span>
+    </div>
+    <div class="company">Digital Agency · Tokyo, Japan</div>
+    <ul>
+      <li>Delivered 20+ web applications using Node.js, React, and PostgreSQL</li>
+      <li>Introduced automated testing practices, increasing test coverage from 15% to 85%</li>
+      <li>Built real-time data processing pipeline handling 1M+ events per day</li>
+    </ul>
+  </div>
+
+  <h2>🏯 Open Source Projects</h2>
+
+  <div class="project-entry">
+    <h4>Kensei (剣聖) — Rust build tool &amp; file watcher</h4>
+    <div class="tech">Rust, Tokio, Clap</div>
+    <p>A blazing-fast CLI tool with real-time file watching, project scaffolding, and test integration.</p>
+  </div>
+
+  <div class="project-entry">
+    <h4>Fujin (風神) — Real-time full-stack dashboard</h4>
+    <div class="tech">Next.js 15, TypeScript, Recharts, Prisma</div>
+    <p>Modern dashboard with real-time data visualization, REST APIs, and TypeScript strict mode.</p>
+  </div>
+
+  <div class="project-entry">
+    <h4>Dojo (道場) — DevOps infrastructure</h4>
+    <div class="tech">Docker, Kubernetes, Terraform, Nginx</div>
+    <p>Production-grade infrastructure templates with monitoring, auto-scaling, and CI/CD.</p>
+  </div>
+
+  <div class="project-entry">
+    <h4>Shinobi (忍) — Go microservice framework</h4>
+    <div class="tech">Go, Gin, PostgreSQL, Redis, gRPC</div>
+    <p>High-performance HTTP service framework with structured logging and graceful shutdown.</p>
+  </div>
+
+  <h2>🎓 Education</h2>
+  <div class="entry">
+    <div class="entry-header">
+      <h3>B.S. Computer Science</h3>
+      <span class="date">2008 — 2012</span>
+    </div>
+    <div class="company">University of Tokyo</div>
+    <p style="font-size:0.85rem;margin-top:0.15rem;">Focus: Distributed Systems, Programming Languages</p>
+  </div>
+</body>
+</html>
